@@ -1,5 +1,21 @@
-const UseStateBasics = () => {
-  return <h2>useState basics</h2>;
-};
+import { useState } from 'react'
 
-export default UseStateBasics;
+const UseStateBasics = () => {
+  const [count, setCount] = useState(0)
+
+  const handleClick = () => {
+    setCount(count + 1)
+    console.log(count)
+  }
+
+  return (
+    <div>
+      <h2>Count:{count}</h2>
+      <button type='buttonq' className='btn' onClick={handleClick}>
+        Click
+      </button>
+    </div>
+  )
+}
+
+export default UseStateBasics
